@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Social Media Dashboard</title>
+</head>
+
+<body class="light-theme">
+  <header>
+    <h1 class="title">Social Media Dashboard</h1>
+    <p class="tag">Total Followers: 23,004</p>
+    <p class="theme-label">Dark Mode</p>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <section id="stats" class="stats">
+    <div class="facebook">
+      <p><img src="images/icon-facebook.svg" alt="facebook">@nathanf</p>
+      <h2 class="card-count">1987</h2>
+      <p class="followers">Followers</p>
+      <small class="green"><img src="images/icon-up.svg" alt="">12 Today</small>
+    </div>
+    <div class="twitter">
+      <p><img src="images/icon-twitter.svg" alt="twitter">@nathanf</p>
+      <h2 class="card-count">1044</h2>
+      <p class="followers">Followers</p>
+      <small class="green"><img src="images/icon-up.svg" alt="">99 Today</small>
+    </div>
+    <div class="instagram">
+      <p><img src="images/icon-instagram.svg" alt="instagram">@realnathanf</p>
+      <h2 class="card-count">11k</h2>
+      <p class="followers">Followers</p>
+      <small class="green"><img src="images/icon-up.svg" alt="">1099 Today</small>
+    </div>
+    <div class="youtube">
+      <p><img src="images/icon-youtube.svg" alt="youtube">Nathan F.</p>
+      <h2 class="card-count">8239</h2>
+      <p class="followers">Subscribers</p>
+      <small class="red"><img src="images/icon-down.svg" alt="">144 Today</small>
+    </div>
+  </section>
+
+  <section id="overview" class="overview">
+    <h3 class="overview__title">Overview - Today</h3>
+    <div class="overview__wrapper">
+      <div class="overview__card">
+        <p>Page Views</p>
+        <img src="images/icon-facebook.svg" alt="facebook">
+        <h2 class="card-count">87</h2>
+        <small class="green"><img src="images/icon-up.svg" alt="">3%</small>
+      </div>
+      <div class="overview__card">
+        <p>Likes</p>
+        <img src="images/icon-facebook.svg" alt="facebook">
+        <h2 class="card-count">52</h2>
+        <small class="red"><img src="images/icon-down.svg" alt="">2%</small>
+      </div>
+      <div class="overview__card">
+        <p>Likes</p>
+        <img src="images/icon-instagram.svg" alt="instagram">
+        <h2 class="card-count">5462</h2>
+        <small class="green"><img src="images/icon-up.svg" alt="">2257%</small>
+      </div>
+      <div class="overview__card">
+        <p>Profile Views</p>
+        <img src="images/icon-instagram.svg" alt="instagram">
+        <h2 class="card-count">52k</h2>
+        <small class="green"><img src="images/icon-up.svg" alt="">1375%</small>
+      </div>
+      <div class="overview__card">
+        <p>Retweets</p>
+        <img src="images/icon-twitter.svg" alt="twitter">
+        <h2 class="card-count">117</h2>
+        <small class="green"><img src="images/icon-up.svg" alt="">303%</small>
+      </div>
+      <div class="overview__card">
+        <p>Likes</p>
+        <img src="images/icon-twitter.svg" alt="twitter">
+        <h2 class="card-count">507</h2>
+        <small class="green"><img src="images/icon-up.svg" alt="">553%</small>
+      </div>
+      <div class="overview__card">
+        <p>Likes</p>
+        <img src="images/icon-youtube.svg" alt="youtube">
+        <h2 class="card-count">107</h2>
+        <small class="red"><img src="images/icon-down.svg" alt="">19%</small>
+      </div>
+      <div class="overview__card">
+        <p>Total Views</p>
+        <img src="images/icon-youtube.svg" alt="youtube">
+        <h2 class="card-count">1407</h2>
+        <small class="red"><img src="images/icon-down.svg" alt="">12%</small>
+      </div>
+    </div>
+  </section>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/nityagulati">Nitya Gulati</a>.
+  </footer>
+
+  <script src="toggle-theme.js"></script>
+</body>
+
+</html>

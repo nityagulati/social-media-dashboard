@@ -1,0 +1,70 @@
+// global card settings 
+%card {
+    margin: 5% 0;
+    padding: 7% 10%;
+    border-radius: 8px;
+ }
+
+// grid settings
+@mixin grid-settings($section) {
+    display: grid;
+    align-items: center;
+
+    @if $section == header {
+        grid-template-areas: 
+                "title title title"
+                "tag tag tag"
+                "label . switch";
+
+        @include for-size(ipad) {
+            grid-template-areas: 
+            'title . . label switch'
+            'tag . . . .';
+            grid-column-gap: 20px;
+        }
+    }
+
+    @if $section == stats {
+        @include for-size(ipad) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 1fr;
+        }
+    }
+
+    @if $section == overview {
+        @include for-size(ipad) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 1fr;  
+        }
+
+        @include for-size(desktop) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 1fr;  
+        }
+    }
+
+    @if $section == overview-card {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10px;
+    }  
+}
+
+// device breakpoints for media queries 
+@mixin for-size($size) {
+    @if $size == large-phone {
+        @media screen and (min-width: 576px) { @content; }
+    }
+    @if $size == ipad {
+        @media screen and (min-width: 768px) { @content; }
+    }
+    @if $size == ipad-pro {
+        @media screen and (min-width: 1024px) { @content; }
+    }
+    @if $size == desktop {
+        @media screen and (min-width: 1220px) { @content; }
+    }
+    @if $size == large-desktop {
+        @media screen and (min-width: 1400px) { @content; }  
+    }
+}

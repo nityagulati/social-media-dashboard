@@ -1,0 +1,85 @@
+// large phone - (min-width: 576px)
+@include for-size(large-phone) {
+    header {
+        .title {
+            font-size: map-get($font-size, large);
+        }
+
+        .tag {
+            font-size: map-get($font-size, regular);
+        }
+
+        .theme-label {
+            font-size: map-get($font-size, regular);
+        }
+    }
+
+    section {
+        margin: 0 10%;
+    }
+}
+
+// desktop - (min-width: 768px)
+@include for-size(ipad) {
+    body {
+        padding: 2% 5%;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: calc(6% + 120px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    header {
+        margin-bottom: 0;
+
+        .title {
+            font-size: map-get($font-size, medium);
+        }
+
+        .tag {
+            font-size: map-get($font-size, small);
+        }
+
+        .theme-label {
+            font-size: map-get($font-size, small);
+            text-align: right;
+        }
+    }
+
+    section {
+        margin: 0;
+    }
+
+    %card {
+        margin: 5%;
+    }
+
+    .stats {
+        margin-bottom: 5%;
+    }
+
+    .overview {
+        margin-bottom: 5%;
+    }
+
+    .light-theme, .dark-theme {
+        .tag {
+            border-bottom: none;
+        }
+    }
+}
+
+// desktop - (min-width: 1220px)
+@include for-size(desktop) {
+    body {
+        &::before {
+            height: calc(6% + 180px);
+        }
+    }
+}

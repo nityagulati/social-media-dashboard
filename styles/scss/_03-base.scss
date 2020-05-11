@@ -1,0 +1,42 @@
+/* -- mobile-first development - scaled up
+base styles - small phone - (min-width: 320px) -- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: map-get($font-stack, primary), sans-serif;
+    font-weight: map-get($font-weight, bold);
+    font-size: map-get($font-size, base);
+    padding: 5%;
+    text-align: center;
+}
+
+img {
+    margin-right: 3%;
+    vertical-align: middle;
+}
+
+small {
+    font-size: map-get($font-size, small);
+}
+
+.attribution {
+    font-size: map-get($font-size, xsmall);
+
+    a {
+        color: map-get($primary-colors, attribution);
+    }
+}
+
+.green {
+    color: map-get($primary-colors, lime-green);
+}
+
+.red {
+    color: map-get($primary-colors, bright-red);
+}

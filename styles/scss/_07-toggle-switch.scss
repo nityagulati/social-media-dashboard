@@ -1,0 +1,45 @@
+// variables
+$width: 50px;
+$padding: 5px;
+$height: $width / 2 + $padding;
+
+// toggle switch wrapper
+.switch {
+    cursor: pointer;
+    width: $width;
+    height: $height;
+    padding: $padding;
+    border-radius: $height / 2;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+
+        // slider when checked
+        &:checked {
+            + .slider {
+                grid-template-columns: 0fr 1fr 1fr;
+            }
+        }
+    }
+}
+
+// switch slider 
+.slider {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0fr;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    // toggle round button
+    &::after {
+        content: "";
+        border-radius: 50%;
+        grid-column: 2;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+}

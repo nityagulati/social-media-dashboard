@@ -1,0 +1,35 @@
+// overview section
+.overview {
+    margin-bottom: 10%;
+    
+    small {
+        img {
+            margin-right: 3%;
+        }
+    }
+
+    &__title {
+        text-align: left;
+    }
+
+    &__wrapper {
+        @include grid-settings(overview);
+    }
+
+    &__card {
+        @extend %card;
+        @include grid-settings(overview-card);
+    
+        img {
+            margin: auto;
+        }
+
+        p {
+            font-size: map-get($font-size, small);
+        }
+
+        .card-count {
+            font-size: map-get($font-size, medium);
+        }
+    }
+}

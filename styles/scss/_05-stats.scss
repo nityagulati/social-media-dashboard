@@ -1,0 +1,41 @@
+// social network stats section 
+.stats {
+    @include grid-settings(stats);
+    margin-bottom: 10%;
+    
+    p {
+        margin-bottom: 5%;
+    }
+
+    .facebook {
+        @extend %card;
+        border-top: 5px solid map-get($primary-colors, facebook);
+    }
+
+    .twitter {
+        @extend %card;
+        border-top: 5px solid map-get($primary-colors, twitter);
+    }
+
+    .youtube {
+        @extend %card;
+        border-top: 5px solid map-get($primary-colors, youtube);
+    }
+
+    .instagram {
+        @extend %card;
+        background-image: map-get($primary-colors, instagram);
+        background-repeat: no-repeat;
+        background-size: 100% 4%;
+    }
+
+    .card-count {
+        font-size: map-get($font-size, xlarge);
+    }
+
+    .followers {
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: map-get($font-weight, regular);
+    }
+}

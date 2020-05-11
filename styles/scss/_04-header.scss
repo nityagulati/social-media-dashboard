@@ -1,0 +1,26 @@
+// header section
+header {
+    @include grid-settings(header);
+    text-align: left;
+    margin-bottom: 10%;
+
+    .title {
+        grid-area: title;
+        font-size: map-get($font-size, regular);
+    }
+
+    .tag {
+        grid-area: tag;
+        margin-bottom: 5%;
+        padding-bottom: 5%;
+    }
+
+    .theme-label {
+        grid-area: label;
+        vertical-align: middle;
+    }
+
+    .switch {
+        grid-area: switch;
+    }
+}

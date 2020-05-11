@@ -1,0 +1,71 @@
+// light theme colors
+.light-theme {
+    background-color: map-get($light-theme, main-background);
+    color: map-get($light-theme, sub-text);
+
+    &::before {
+        background-color: map-get($light-theme, top-background);
+    }
+
+    .title, .card-count {
+        color: map-get($light-theme, dark-text);
+    }
+
+    .tag {
+        border-bottom: 1px solid map-get($primary-colors, basic-black);
+    }
+
+    .switch {
+        background-color: map-get($light-theme, toggle);
+    }
+
+    .slider {
+        &::after {
+            background-color: map-get($primary-colors, basic-white);
+        }
+    }
+
+    %card {
+        background-color: map-get($light-theme, card-background);
+
+        &:hover {
+            background-color: map-get($light-theme, hover);
+        }
+    }
+}
+
+// dark theme colors
+.dark-theme {
+    background-color: map-get($dark-theme, main-background);
+    color: map-get($dark-theme, sub-text);
+
+    &::before {
+        background-color: map-get($dark-theme, top-background);
+    }
+
+    .title, .card-count {
+        color: map-get($dark-theme, white-text);
+    }
+
+    .tag {
+        border-bottom: 1px solid map-get($primary-colors, basic-white);
+    }
+
+    .switch {
+        background-image: map-get($dark-theme, toggle);
+    }
+
+    .slider {
+        &::after {
+            background-color: map-get($primary-colors, basic-black);
+        }
+    }
+
+    %card {
+        background-color: map-get($dark-theme, card-background);
+
+        &:hover {
+            background-color: map-get($dark-theme, hover);
+        }
+    }
+}
